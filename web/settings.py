@@ -27,8 +27,7 @@ SECRET_KEY = "django-insecure--keus)69u*_(@a^m5*3^l=iv2kf5s1-ix8&t73ust%4gj*br&r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["bookinn-av6o.onrender.com"]
-   
+ALLOWED_HOSTS = ["bookinn-av6o.onrender.com",'127.0.0.1']
 
 # Application definition
 

@@ -13,9 +13,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('login/', views.login_view, name='login'),  
+    # path('login/', views.login_view, name='login'),  
     path('home/', views.home, name='home'),
-    path('signup/', views.sign_up, name='signup'),
+    # path('signup/', views.sign_up, name='signup'),
     path('',views.front,name='front'),
     path('taa/',views.taa,name='taa'),
     # path('logout/', views.logout_view, name='logout'),

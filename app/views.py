@@ -21,42 +21,42 @@ def taa(request):
 
 
 
-def sign_up(request):
-    if request.method == 'POST':
-        user_name = request.POST.get('username')
-        password = request.POST.get('password')
+# def sign_up(request):
+#     if request.method == 'POST':
+#         user_name = request.POST.get('username')
+#         password = request.POST.get('password')
 
         
-        if User.objects.filter(username=user_name).exists():
-            messages.error(request, "User already exists")
-            return redirect('signup')   
+#         if User.objects.filter(username=user_name).exists():
+#             messages.error(request, "User already exists")
+#             return redirect('signup')   
 
-        user = User.objects.create_user(username=user_name, password=password)
-        user.save()
+#         user = User.objects.create_user(username=user_name, password=password)
+#         user.save()
 
-        messages.success(request, "Account created successfully")
-        login(request, user)
+#         messages.success(request, "Account created successfully")
+#         login(request, user)
 
-        # return redirect('home')
-        return redirect('home')
+#         # return redirect('home')
+#         return redirect('home')
 
-    return render(request, "app/signup.html")
+#     return render(request, "app/signup.html")
 
-def login_view(request):
-    if request.method == "POST":
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+# def login_view(request):
+#     if request.method == "POST":
+#         username = request.POST.get('username')
+#         password = request.POST.get('password')
 
-        user = authenticate(request, username=username, password=password)
+#         user = authenticate(request, username=username, password=password)
 
-        if user is not None:
-            login(request, user)
-            return redirect('home')  # change to your homepage
-        else:
-            messages.error(request, "Invalid username or password")
-            return redirect('login')
+#         if user is not None:
+#             login(request, user)
+#             return redirect('home')  # change to your homepage
+#         else:
+#             messages.error(request, "Invalid username or password")
+#             return redirect('login')
 
-    return render(request, 'app/login.html')
+#     return render(request, 'app/login.html')
 
 def front(request):
         

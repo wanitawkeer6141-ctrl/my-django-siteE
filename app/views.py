@@ -3,10 +3,9 @@ from django.views import generic
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
 from .models import HOTEL,fam,ruk
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def home(request):
     hotels =HOTEL.objects.all()
     fams = fam.objects.all()

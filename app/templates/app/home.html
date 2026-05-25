@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pahalgam Trip</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    border: 6px solid;
+    border-image: linear-gradient(to right, blue, purple) 1;
+}
+
+
+.header{
+    background: linear-gradient(to right, #00796b, #26a69a);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
+    
+    width: 400px;        
+    margin: 20px auto;
+    border-radius: 18px;
+}
+
+
+.row{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:20px 0;
+}
+
+.row img{
+    width:360px;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.link-box{
+    text-align:center;
+    margin:15px 0;
+}
+
+.link-box a{
+    display:inline-block;
+    background:#00796b;
+    color:white;
+    padding:10px 16px;
+    margin:5px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.link-box a:hover{
+    background:#004d40;
+    transform:scale(1.05);
+}
+
+/* Hotel cards */
+.cad{
+    text-align:center;
+    margin:20px 0 5px;
+}
+
+.cad img{
+    width:400px;
+    border-radius:12px;
+}
+
+
+
+
+.grid{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:20px;
+}
+
+.grid img{
+    width:360px;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+}.special-img {
+    transform: translateX(100px);
+}
+.font {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.font a {
+    text-decoration: none;
+    background-color: #00796b;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.font a:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">Pahalgam Trip</div>
+
+
+<div class="row">
+    
+    <img src="https://pahalgamdivinebymountview.com/Images/MV19.jpg">
+    <img src="https://gos3.ibcdn.com/7d0e64c8-0e32-4399-a79e-6c03b40d698f.png">
+    <img src="https://pahalgamdivinebymountview.com/Images/MV20.jpg">
+</div>
+
+
+<div class="link-box">
+    <a href="https://pahalgamdivinebymountview.com/" target="_blank">pahalgam divine</a>
+    <a href="https://pahalgamdivinebymountview.com/Home/About" target="_blank">About</a>
+</div>
+
+
+<div class="row">
+    <img src="http://mountviewpahalgam.com/pahalgam_images/gallery/big/pahalgam-2.jpg">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/ba/d8/a7/hotel-mountview.jpg?w=900&h=500&s=1">
+    <img src="https://images.trvl-media.com/lodging/108000000/107200000/107191100/107191064/178455e6.jpg">
+</div>
+
+<div class="link-box">
+    <a href="http://mountviewpahalgam.com/" target="_blank">Mountview</a>
+    <a href="http://mountviewpahalgam.com/tariff.php" target="_blank">Rent</a>
+</div>
+
+
+<div class="row">
+    
+    <img src="https://edge.media.datahc.com/HI366749645.jpg">
+    <img src="https://www.overlandescape.com/storage/accommodations/thumb/Webp_net-resizeimage_(4)17.jpg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Vk6C4wXrujSLROAFklHNr7dlqGTeCEv4Gg&s">
+</div>
+<div class="link-box">
+    <a href="https://hotelbaisaranpahalgam.com/index.html" target="_blank">Hotel Baisaran</a>
+    <a href="https://hotelbaisaranpahalgam.com/about-us.html" target="_blank">About</a>
+</div>
+
+
+
+
+
+
+
+{% for HOTEL in hotels %}
+<div class="cad">
+    <img src="{{ HOTEL.image.url }}">
+     <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/07/79/88/hotel-green-heights.jpg?w=1200&h=1200&s=1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjTCkurqP59lxXcdiYja-qxMyL8Km-5Didug&s">
+   
+</div>
+<div class="link-box">
+    
+    <a href="{{ HOTEL.link }}">GREEN HEIGHTS</a>
+
+</div>
+{% endfor %}
+
+
+
+    <div class="font">
+    
+     <a href="{% url 'front' %}">HOME</a>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srinagar</title>
+
+    <style>
+ 
+    body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    border: 6px solid;
+    border-image: linear-gradient(to right, blue, purple) 1;
+    background: #f5f7f6;
+}
+
+        .container {
+            margin-top: 50px;
+        }
+        .row{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:20px 0;
+}
+
+.row img{
+    width:360px;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.link-box{
+    text-align:center;
+    margin:15px 0;
+}
+
+.link-box a{
+    display:inline-block;
+    background:#00796b;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    color:white;
+    padding:10px 16px;
+    margin:5px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.link-box a:hover{
+    background:#004d40;
+    transform:scale(1.05);
+}
+.header {
+    background: linear-gradient(to right, #00796b, #26a69a); 
+    color: white; 
+    font-size: 28px;
+    font-weight: bold; 
+    text-align: center;
+    padding: 15px 0;
+    width: 300px; 
+    margin: 20px auto;
+    border-radius: 18px;
+
+    
+    max-width: 200px;
+    width: 90%;
+
+}
+.font {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.font a {
+    text-decoration: none;
+    background-color: #00796b;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.font a:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">Srinagar Trip</div>
+
+    <div class="container">
+        <div class="row">
+            <img src="https://media.radissonhotels.net/image/radisson-collection-hotel-spa-riverfront-srinagar/exterior/16256-126774-f76708082_3XL.jpg">
+            <img src="https://media.radissonhotels.net/image/press-releases--loyalty/exterior/16256-151404-f78707612_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/00/3c/41/collection-executive.jpg?w=900&h=500&s=1">
+        </div>
+
+        <div class="link-box">
+            <a href="https://www.radissonhotels.com/en-us/hotels/radisson-collection-srinagar">
+                Radisson Collection Srinagar
+            </a>
+        </div>
+        <div class="row">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5mv3J9f7wNAFcCn4_nWvE1AgKrII-qhS2qg&s">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/753608677.jpg?k=cda6de14e82221160dc49af3297ff1dc311fbbc02cbb0b962f54aa0c1ee966c3&o=">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs2vWynbZk-nZ37DPl57caSkOmq4B398I-wQ&s">
+        </div>
+        <div class="link-box">
+            <a href="https://thekabo.com/">hotel kabo</a>
+            <a href="https://thekabo.com/dining/">about</a>
+        </div>
+    <div class="row">
+        <img src="https://gos3.ibcdn.com/68683a45-f4ab-46b0-9407-38c3025aecd1.jpg">
+        <img src="https://palmparadisesrinagar.com/images/gallery/g10.jpg">
+        <img src="https://palmparadisesrinagar.com/images/gallery/g12.jpg">
+    </div>
+    <div class="link-box">
+        <a href="https://palmparadisesrinagar.com/">hotel palm</a>
+        <a href="https://palmparadisesrinagar.com/about">about</a>
+    </div>
+    <div class="font">
+    
+     <a href="{% url 'front' %}">HOME</a>
+</div>
+
+
+
+</body>
+</html>

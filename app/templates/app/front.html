@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selection </title>
+    <style>
+        .box {
+        margin:auto;
+        text-align: center;
+        color:white;
+        background-color:red;
+        padding: 10px  10px;
+        border-radius: 18px;
+        width: 170px;
+        font-weight: bold;
+    }
+.cap {
+    margin:auto;
+    margin-top: 10px;
+    text-align: center;
+    background-color: red;
+    border-radius: 20px;
+    width: 170px;
+       
+    padding: 10px 10px;
+    color: white; 
+    font-weight: bold;
+    
+} 
+.box a, .cap a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.box:hover, .cap:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="box">
+    <a href="{% url 'home'%}">HOTELS in pahalgam</a></div>
+    <div class="cap">
+        <a href="{% url 'taa' %}">Srinagar</a>
+    </div>
+</body>
+</html>

@@ -19,7 +19,12 @@ class fam(models.Model):
     # def __str__(self):
     #     return self.image
 
-class ruk(models.Model):
-    image = models.ImageField(upload_to='app/')
+class Booking(models.Model):
+    name = models.CharField(max_length=100)
+    rooms = models.IntegerField()
+    guests = models.IntegerField()
+    check_in = models.DateField()
+    check_out = models.DateField()
+
     def __str__(self):
-        return self.image.name if self.image else "no image"
+        return f"{self.name} - {self.rooms} rooms"

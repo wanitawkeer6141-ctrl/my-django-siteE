@@ -18,6 +18,8 @@ urlpatterns = [
     # path('signup/', views.sign_up, name='signup'),
     path('',views.front,name='front'),
     path('taa/',views.taa,name='taa'),
+   path('booking/', views.booking_view, name="booking"), 
+   path('success/',views.success,name="success"),
     # path('logout/', views.logout_view, name='logout'),
 ]
 

@@ -1,6 +1,11 @@
 from django import forms
-from .models import comment
-class CommentForm(forms.ModelForm):
+from .models import Booking
+
+class BookingForm(forms.ModelForm):
     class Meta:
-        exclude = {"post"}
-        labels = {"user_name":"your name","email_addr":"email"}
+        model = Booking
+        fields = '__all__'
+        widgets = {
+            'check_in': forms.DateInput(attrs={'type': 'date'}),
+            'check_out': forms.DateInput(attrs={'type': 'date'}),
+        }

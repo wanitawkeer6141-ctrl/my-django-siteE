@@ -6,14 +6,18 @@
     <title>Srinagar</title>
 
     <style>
- 
-    body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    border: 6px solid;
-    border-image: linear-gradient(to right, blue, purple) 1;
-    background: #f5f7f6;
+        body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        border: 6px solid;
+        border-image: linear-gradient(to right, blue, purple) 1;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #4facfe, #00f2);
 }
+
+ 
+
 
         .container {
             margin-top: 50px;
@@ -108,9 +112,8 @@
         </div>
 
         <div class="link-box">
-            <a href="https://www.radissonhotels.com/en-us/hotels/radisson-collection-srinagar">
-                Radisson Collection Srinagar
-            </a>
+            <a href="https://www.radissonhotels.com/en-us/hotels/radisson-collection-srinagar">   Radisson Collection Srinagar</a>
+            <a href="{% url 'booking'%}">booking</a>
         </div>
         <div class="row">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5mv3J9f7wNAFcCn4_nWvE1AgKrII-qhS2qg&s">
@@ -120,6 +123,7 @@
         <div class="link-box">
             <a href="https://thekabo.com/">hotel kabo</a>
             <a href="https://thekabo.com/dining/">about</a>
+            <a href="{% url 'booking'%}">booking</a>
         </div>
     <div class="row">
         <img src="https://gos3.ibcdn.com/68683a45-f4ab-46b0-9407-38c3025aecd1.jpg">
@@ -129,13 +133,11 @@
     <div class="link-box">
         <a href="https://palmparadisesrinagar.com/">hotel palm</a>
         <a href="https://palmparadisesrinagar.com/about">about</a>
+        <a href="{% url 'booking'%}">booking</a>
     </div>
     <div class="font">
     
      <a href="{% url 'front' %}">HOME</a>
 </div>
-
-
-
 </body>
 </html>

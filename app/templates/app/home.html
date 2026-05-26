@@ -7,11 +7,17 @@
 <title>Pahalgam Trip</title>
 
 <style>
+            
+             
+        
 body{
     margin:0;
     font-family: Arial, sans-serif;
     border: 6px solid;
     border-image: linear-gradient(to right, blue, purple) 1;
+                    margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2);
 }
 
 
@@ -139,6 +145,7 @@ body{
 <div class="link-box">
     <a href="https://pahalgamdivinebymountview.com/" target="_blank">pahalgam divine</a>
     <a href="https://pahalgamdivinebymountview.com/Home/About" target="_blank">About</a>
+    <a href="{% url 'booking'%}">booking</a>
 </div>
 
 
@@ -151,6 +158,7 @@ body{
 <div class="link-box">
     <a href="http://mountviewpahalgam.com/" target="_blank">Mountview</a>
     <a href="http://mountviewpahalgam.com/tariff.php" target="_blank">Rent</a>
+    <a href="{% url 'booking'%}">booking</a>
 </div>
 
 
@@ -163,6 +171,7 @@ body{
 <div class="link-box">
     <a href="https://hotelbaisaranpahalgam.com/index.html" target="_blank">Hotel Baisaran</a>
     <a href="https://hotelbaisaranpahalgam.com/about-us.html" target="_blank">About</a>
+    <a href="{% url 'booking'%}">booking</a>
 </div>
 
 
@@ -181,6 +190,7 @@ body{
 <div class="link-box">
     
     <a href="{{ HOTEL.link }}">GREEN HEIGHTS</a>
+    <a href="{% url 'booking'%}">booking</a>
 
 </div>
 {% endfor %}
@@ -191,6 +201,8 @@ body{
     
      <a href="{% url 'front' %}">HOME</a>
 </div>
+
+
 </body>
 </html>
 

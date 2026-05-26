@@ -3,7 +3,8 @@ from django.views import generic
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
-from .models import HOTEL,fam,ruk
+from .models import HOTEL,fam
+from .forms import BookingForm
 
 # @login_required(login_url='login')
 def home(request):
@@ -14,9 +15,7 @@ def home(request):
                    "fams":fams})
 
    
-def taa(request):
-    famr = ruk.objects.all()
-    return render(request,'app/taa.html',{'famr':famr})
+
 
 
 
@@ -65,12 +64,19 @@ def front(request):
 def taa (request):
     return render(request,"app/taa.html")
 
-      
 
 
 
 
+#     return render(request, 'booking.html', {'form': form})
+def booking_view(request):
+    form = BookingForm(request.POST or None)   
 
+    if form.is_valid():
+        form.save()
+        return redirect('success')
 
+    return render(request, 'app/booking.html', {'form': form})
 
-
+def success(request):
+     return render(request,'app/success.html')
